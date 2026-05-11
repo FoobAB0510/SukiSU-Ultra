@@ -160,9 +160,9 @@ class MainActivity : ComponentActivity() {
                 LocalNavigator provides navigator,
                 LocalDensity provides density,
                 LocalColorMode provides appSettings.colorMode.value,
-                LocalEnableBlur provides uiState.enableBlur,
+                LocalEnableBlur provides false,
                 LocalEnableFloatingBottomBar provides uiState.enableFloatingBottomBar,
-                LocalEnableFloatingBottomBarBlur provides uiState.enableFloatingBottomBarBlur,
+                LocalEnableFloatingBottomBarBlur false,
                 LocalUiMode provides uiMode,
                 LocalSnackbarHost provides snackBarHostState
             ) {
