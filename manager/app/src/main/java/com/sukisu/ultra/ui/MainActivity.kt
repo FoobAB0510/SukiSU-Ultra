@@ -162,7 +162,7 @@ class MainActivity : ComponentActivity() {
                 LocalColorMode provides appSettings.colorMode.value,
                 LocalEnableBlur provides false,
                 LocalEnableFloatingBottomBar provides uiState.enableFloatingBottomBar,
-                LocalEnableFloatingBottomBarBlur false,
+                LocalEnableFloatingBottomBarBlur provides false,
                 LocalUiMode provides uiMode,
                 LocalSnackbarHost provides snackBarHostState
             ) {
@@ -234,7 +234,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        setIntent(intent)
+        setIntent(intent)   
         // Increment intentState to trigger LaunchedEffect re-execution
         intentStateValue += 1
         intentStateFlow.value = intentStateValue
